@@ -13,20 +13,31 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <div><NavLink to="/adidas">Adidas</NavLink></div>
-                    <div><NavLink to="/puma">Puma</NavLink></div>
-                    <div><NavLink to="/abibas">Abibas</NavLink></div>
+                    <div><NavLink to={"/adidas"}
+                                  className={({isActive}) => isActive ? styles.active : styles.navLink}>Adidas</NavLink>
+                    </div>
+                    <div><NavLink to={"/puma"}
+                                  className={({isActive}) => isActive ? styles.active : styles.navLink}>Puma</NavLink>
+                    </div>
+                    <div><NavLink to={"/abibas"}
+                                  className={({isActive}) => isActive ? styles.active : styles.navLink}>Abibas</NavLink>
+                    </div>
                 </div>
                 <div className={styles.content}>
                     <Routes>
                         <Route path="/" element={<Navigate to={"/adidas"}/>}/>
 
-                        <Route path="/adidas" element={<PageOne/>}/>
-                        <Route path="/puma" element={<PageTwo/>}/>
-                        <Route path="/abibas" element={<PageThree/>}/>
+                        <Route path={"/adidas"} element={<PageOne/>}/>
+                        <Route path={"/puma"} element={<PageTwo/>}/>
+                        <Route path={"/abibas"} element={<PageThree/>}/>
 
-                        <Route path="/*" element={<Navigate to={"/error404"}/>}/>
-                        <Route path="/error404" element={<Error404/>}/>
+                        <Route path="/*" element={<Navigate to={"/page/error404"}/>}/>
+                        <Route path={"/page/error404"} element={<Error404/>}/>
+                        {/*если нам надо перенапрвить на дрес Error404*/}
+
+                        {/*<Route path="/*" element={<Error404/>}/>*/}
+                        {/*если нам надо видеть ошибочный адрес*/}
+
                     </Routes>
                 </div>
             </div>
@@ -37,3 +48,5 @@ function App() {
 
 
 export default App;
+
+
