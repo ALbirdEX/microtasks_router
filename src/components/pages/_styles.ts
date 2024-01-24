@@ -56,7 +56,7 @@ const FooterWrapper = styled.div`
     height: 120px;
     text-align: center;
     color: white;
-    border-radius: 0px 0px 60px 60px;
+    border-radius: 0 0 60px 60px;
 `
 
 export const S = {
