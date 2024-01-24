@@ -1,23 +1,5 @@
 import styled from "styled-components";
 
-/*const NavLinkWrapper = styled.div`
-    margin-left: 20px;
-    font-size: 30px;
-    
-    & > a {
-        text-decoration: none;
-        color: blue;
-    }
-
-    & > a.active {
-        text-decoration: none;
-        color: aqua;
-    }
-
-    & > a:hover {
-        color: cornflowerblue;
-    }
-`*/
 const HeaderWrapper = styled.div`
     background-color: #000000;
     width: 100%;
