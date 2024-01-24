@@ -6,6 +6,7 @@ const HeaderWrapper = styled.div`
     height: 100px;
     text-align: center;
     color: white;
+    border-radius: 60px;
 `
 
 const BodyWrapper = styled.div`
@@ -13,14 +14,15 @@ const BodyWrapper = styled.div`
 `
 
 const NavWrapper = styled.div`
-    background-color: white;
+    background-color: antiquewhite;
     min-height: 400px;
     width: 30%;
     color: #282c34;
     font-size: 30px;
+    border-top-left-radius: 60px;
 
     & > div {
-        margin-left: 20px;
+       text-align: center;
         font-size: 30px;
     }
 
@@ -45,6 +47,7 @@ const ContentWrapper = styled.div`
     width: 70%;
     color: white;
     font-size: 30px;
+    border-top-right-radius: 60px;
 `
 
 const FooterWrapper = styled.div`
@@ -53,6 +56,7 @@ const FooterWrapper = styled.div`
     height: 120px;
     text-align: center;
     color: white;
+    border-radius: 0px 0px 60px 60px;
 `
 
 export const S = {
