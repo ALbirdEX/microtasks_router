@@ -18,14 +18,14 @@ const PATH = {
 function App() {
     return (
         <div>
-            <div className={styles.header}><h1>HEADER</h1></div>
-            <div className={styles.body}>
-                <div className={styles.nav}>
-                    <S.NavWrapper><NavLink to={PATH.PAGE1}>Adidas</NavLink></S.NavWrapper>
-                    <S.NavWrapper><NavLink to={PATH.PAGE2}>Puma</NavLink></S.NavWrapper>
-                    <S.NavWrapper><NavLink to={PATH.PAGE3}>Abibas</NavLink></S.NavWrapper>
-                </div>
-                <div className={styles.content}>
+            <S.HeaderWrapper><h1>HEADER</h1></S.HeaderWrapper>
+            <S.BodyWrapper>
+                <S.NavWrapper>
+                    <div ><NavLink to={PATH.PAGE1}>Adidas</NavLink></div>
+                    <div><NavLink to={PATH.PAGE2}>Puma</NavLink></div>
+                    <div><NavLink to={PATH.PAGE3}>Abibas</NavLink></div>
+                </S.NavWrapper>
+                <S.ContentWrapper>
                     <Routes>
                         <Route path="/" element={<Navigate to={PATH.PAGE1}/>}/>
 
@@ -41,9 +41,9 @@ function App() {
                         {/*если нам надо видеть ошибочный адрес*/}
 
                     </Routes>
-                </div>
-            </div>
-            <div className={styles.footer}>abibas 2023</div>
+                </S.ContentWrapper>
+            </S.BodyWrapper>
+            <S.FooterWrapper>abibas 2023</S.FooterWrapper>
         </div>
     );
 }
