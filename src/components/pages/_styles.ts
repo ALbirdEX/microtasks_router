@@ -6,7 +6,7 @@ const HeaderWrapper = styled.div`
     height: 100px;
     text-align: center;
     color: white;
-    border-radius: 60px;
+    border-radius: 30px 30px 0 0;
 `
 
 const BodyWrapper = styled.div`
@@ -19,10 +19,9 @@ const NavWrapper = styled.div`
     width: 30%;
     color: #282c34;
     font-size: 30px;
-    border-top-left-radius: 60px;
 
     & > div {
-       text-align: center;
+        text-align: center;
         font-size: 30px;
     }
 
@@ -38,16 +37,44 @@ const NavWrapper = styled.div`
 
     & > div > a:hover {
         color: cornflowerblue;
+        border-radius: 25px;
+    }
+
+    & > div > a > button {
+        margin-top: 10px;
+        width: 150px;
+        height: 75px;
+        background: #7fc5ff;
+        border-radius: 25px;
+        font-size: xx-large;
+    }
+
+    & > div > a > button:hover {
+        background: rgb(93, 115, 140);
     }
 `
 
 const ContentWrapper = styled.div`
+    display: flex;
+    justify-content: center;
     background-color: #282c34;
     min-height: 400px;
     width: 70%;
     color: white;
     font-size: 30px;
-    border-top-right-radius: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+
+    & > div > h2 {
+        text-align: center;
+    }
+    
+    & > div > a > img {
+        width: 270px;
+        height: auto;
+        padding-left: 2ch;
+    }
+
 `
 
 const FooterWrapper = styled.div`
@@ -56,7 +83,18 @@ const FooterWrapper = styled.div`
     height: 120px;
     text-align: center;
     color: white;
-    border-radius: 0 0 60px 60px;
+    border-radius: 0 0 30px 30px;
+`
+
+const ImagesWrapper= styled.div`
+    display: flex;
+    justify-content: center;
+
+    & > img {
+        width: 270px;
+        height: auto; 
+        padding-right: 20px
+    }
 `
 
 export const S = {
@@ -64,5 +102,6 @@ export const S = {
     ContentWrapper,
     FooterWrapper,
     BodyWrapper,
-    HeaderWrapper
+    HeaderWrapper,
+    ImagesWrapper
 }
