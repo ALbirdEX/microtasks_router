@@ -6,13 +6,15 @@ import {Error404} from "./components/pages/Error404";
 import {S} from "./components/pages/_styles";
 import {Links} from "./components/pages/Links";
 import {Adidas} from "./components/pages/Adidas";
-import {Model} from "./components/pages/Model";
+import {ModelAdidas} from "./components/pages/ModelAdidas";
+import {ModelPuma} from "./components/pages/ModelPuma";
 
 export const PATH = {
     PAGE1: '/adidas',
     PAGE2: '/puma',
     PAGE3: '/abibas',
-    MODEL: '/adidas/:id',
+    MODEL_ADIDAS: '/adidas/:id',
+    MODEL_PUMA: '/puma/:id',
     PAGE_ERROR: "/page/error404"
 } as const  //что бы нельзя было изменить значение свойства
 
@@ -36,7 +38,8 @@ function App() {
                         <Route path={PATH.PAGE1} element={<Adidas/>}/>
                         <Route path={PATH.PAGE2} element={<Puma/>}/>
                         <Route path={PATH.PAGE3} element={<Abibas/>}/>
-                        <Route path={PATH.MODEL} element={<Model/>}/>
+                        <Route path={PATH.MODEL_ADIDAS} element={<ModelAdidas/>}/>
+                        <Route path={PATH.MODEL_PUMA} element={<ModelPuma/>}/>
 
                         {/*<Route path="/*" element={<Navigate to={PATH.PAGE_ERROR}/>}/>*/}
                         {/*если нам не надо видеть ошибочный адрес*/}

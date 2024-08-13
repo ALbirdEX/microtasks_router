@@ -1,8 +1,8 @@
 import React from 'react';
-import Model1 from '../../assets/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp'
-import Model2 from '../../assets/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp'
+import Model1 from '../../assets/adidas/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp'
+import Model2 from '../../assets/adidas/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp'
 import Model3
-    from '../../assets/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp'
+    from '../../assets/adidas/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp'
 import {Link} from "react-router-dom";
 import {v1} from "uuid";
 
@@ -51,7 +51,7 @@ export const adidasArr: AdidasItem[] = [
 ]
 
 export const Adidas = () => {
-    console.log(adidasArr)
+
     return (
         <div>
             <h2>ADIDAS</h2>
