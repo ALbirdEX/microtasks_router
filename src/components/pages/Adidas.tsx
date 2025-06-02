@@ -58,14 +58,19 @@ export const Adidas = () => {
             {/*  <img src={adidasModel1} alt="Model1"/>
                 <img src={adidasModel2} alt="Model2"/>
                 <img src={adidasModel3} alt="Model3"/>*/}
+
             {adidasArr.map((adidas) => (
                 <Link key={adidas.id} to={`/adidas/${adidas.id}`}>
                     <img
                         src={adidas.picture}
                         alt={adidas.model}
+                        //style={{width: '200px',height: "auto", margin: '20px'}}
                     />
                 </Link>
             ))}
+            <div style={{display: "flex", justifyContent: "center"}}>
+                {/*добавить для центорвки*/}
+            </div>
             <p>
                 What is Lorem Ipsum?
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the

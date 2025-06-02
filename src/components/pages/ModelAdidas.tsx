@@ -1,6 +1,7 @@
 import React from 'react';
 import {adidasArr} from "./Adidas";
 import {useParams} from "react-router-dom";
+import {Error404} from "./Error404";
 
 export const ModelAdidas = () => {
 
@@ -69,6 +70,7 @@ export const ModelAdidas = () => {
             </div>
             : <div>
                 <h2>No model</h2>
+                {/*<Error404/>*/}
             </div>}
     </>
 };
